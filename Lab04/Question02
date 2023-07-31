@@ -1,0 +1,65 @@
+//Program.cs
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Lab04_Question02
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            float value;
+            Console.WriteLine("Enter the radius:");
+            value = float.Parse(Console.ReadLine());
+            FindValues radius1 = new FindValues(value);
+            Console.WriteLine("The Area is "+radius1.findArea());
+            Console.WriteLine("The Circumference is "+radius1.findCircumference());
+
+            Console.ReadLine();
+
+
+        }
+    }
+}
+
+
+//Calculator.cs
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Lab04_Question02
+{
+    internal class FindValues
+    {
+        public float radius;
+        public const float pi=3.14159f;
+        public float area;
+        public float circum;
+
+        public FindValues(float value)
+        {
+            radius =value;
+
+        }
+
+        public float findArea()
+        {
+            area = pi * radius * radius;
+            return area;
+        }
+
+        public float findCircumference()
+        {
+            circum = 2*pi*radius;
+            return circum;
+        }
+    }
+}
