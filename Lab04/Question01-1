@@ -1,0 +1,65 @@
+//Program.cs
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Security.Cryptography;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Lab04
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+
+            ConvertValues distance1 = new ConvertValues();
+            distance1.distance = 25;
+
+            Console.WriteLine(distance1.kilometerTometer());
+
+
+            
+            Console.ReadLine();
+
+
+            
+           
+        }
+    }
+}
+
+
+//Class file-ConvertValues1.cs
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Security.Cryptography;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Lab04
+{
+    internal class ConvertValues
+    {
+        public int distance;
+
+        public ConvertValues()
+        {
+           
+        }
+
+        public void kilometerTometer() 
+        {
+            distance = distance * 1000;
+            Console.WriteLine("The distance in meters is "+distance);
+        }
+
+    }       
+
+       
+        
+    
+}
