@@ -1,0 +1,50 @@
+//Program.cs
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Lab05_Question04
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Class1 class1 = new Class1();
+            Console.WriteLine(class1.hello());
+
+            Console.ReadLine();
+        }
+    }
+}
+
+//Class1.cs
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Lab05_Question04
+{
+    internal class Class1
+    {
+        public string str;
+
+        private void sayHello() 
+        {
+            Console.WriteLine("Hello World");
+        }
+
+        public string hello()
+        {
+            sayHello();
+            return str;
+            
+        }
+    }
+}
+
