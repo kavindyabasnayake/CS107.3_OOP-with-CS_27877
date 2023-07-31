@@ -1,0 +1,57 @@
+//Program.cs
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Lab04_Question01_3
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            {
+                int value;
+                Console.WriteLine("Enter the distance in kilometers:");
+                value = int.Parse(Console.ReadLine());
+
+                ConvertValues distance1 = new ConvertValues(value);
+                Console.WriteLine(distance1.kilometerTometer());
+                Console.ReadLine();
+            }
+        }
+    }
+}
+
+
+//Convertor2.cs
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Lab04_Question01_3
+{
+    
+     internal class ConvertValues
+        {
+           public int distance;
+
+           public ConvertValues(int value)
+           {
+                distance = value;
+           }
+
+           public int kilometerTometer()
+           {
+                distance = distance * 1000;
+                return distance;
+           }
+
+        }
+    }
+
