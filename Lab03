@@ -1,0 +1,81 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Security.Cryptography.X509Certificates;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Lab03
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            //Question 01
+            int num,mod;
+            Console.WriteLine("Enter the value:");
+            num = int.Parse(Console.ReadLine());
+            mod = num % 2;
+            if (mod == 0)
+                Console.WriteLine("Even");
+            else
+                Console.WriteLine("Odd");
+            Console.ReadLine();
+
+            //Question 02
+            string word,wordN;
+            int i,sum=0,len;
+            Console.WriteLine("Enter a string:");
+            word = Console.ReadLine();
+            wordN = word.ToLower() ;
+            len = wordN.Length;
+            for(i=0;i<len;i++)
+            {
+                switch(wordN[i])
+                {
+                    case 'a':sum++; break;
+                    case 'e':sum++; break;
+                    case 'i':sum++; break;
+                    case 'o':sum++; break;
+                    case 'u':sum++; break;
+                }
+            }
+            Console.WriteLine("The number of vowels in the word -"+word+"- is "+sum);
+            Console.ReadLine();
+
+            //Question 03
+            int n, total = 0;
+            Console.WriteLine("Enter your number:");
+            n = int.Parse(Console.ReadLine());
+            while(n>0)
+            {
+                total += n%10;
+                n /= 10;
+            }
+            Console.WriteLine("The sum of the digits of the number is "+total);
+            Console.ReadLine();
+
+            //Question 04
+            int x,y, modulus,tot=0;
+            Console.WriteLine("Enter an integer:");
+            x = int.Parse(Console.ReadLine());
+            while(x>0)
+            {
+                y= x % 10;
+                modulus = y%2;
+                if (modulus == 1)
+                    tot+=y;
+                x /= 10;
+
+            }
+            Console.WriteLine("The sum of all the odd numbers is "+tot);
+            Console.ReadLine();
+
+            
+
+
+
+
+        }
+    }
+}
