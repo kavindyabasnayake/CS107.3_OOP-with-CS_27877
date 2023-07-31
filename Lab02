@@ -1,0 +1,81 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Runtime.InteropServices;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Lab02
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            //Question 01
+            int x,y,sum;
+            Console.WriteLine("Enter the first value:");
+            x = int.Parse(Console.ReadLine());
+            Console.WriteLine("Enter the second value:");
+            y = int.Parse(Console.ReadLine());
+            sum = x + y;
+            Console.WriteLine("The sum of "+x+" and "+y+" is "+sum);
+            Console.ReadLine();
+
+            //Question 02
+            int num1, num2,summ,sub,mul,div;
+            Console.WriteLine("Enter the first value:");
+            num1= int.Parse(Console.ReadLine());
+            Console.WriteLine("Enter the second value:");
+            num2= int.Parse(Console.ReadLine());
+            summ = num1 + num2;
+            sub  = num1 - num2;
+            mul  = num1 * num2;
+            div  = num1 / num2;
+            Console.WriteLine("Summation:"+summ);
+            Console.WriteLine("Subtraction:" + sub);
+            Console.WriteLine("Multiplication:" + mul);
+            Console.WriteLine("Division:" + div);
+            Console.ReadLine();
+
+            //Question 03
+            float r,area,circm;
+            const float pi = 3.14159f;
+            Console.WriteLine("Enter the radius:");
+            r = float.Parse(Console.ReadLine());
+            area = pi * r * r;
+            circm = 2 * pi * r;
+            Console.WriteLine("The Area of the circle is "+area);
+            Console.WriteLine("The Circumference of the circle is " + circm);
+            Console.ReadLine();
+
+            //Question 04
+            int num, mod ;
+            Console.WriteLine("Enter Your Value:");
+            num = int.Parse(Console.ReadLine());
+            mod = num % 2;
+            if (mod == 0)
+                Console.WriteLine("The number "+num+" is even");
+            else
+                Console.WriteLine("The number " + num + " is odd");
+            Console.ReadLine();
+
+            //Question 05
+            int i, n, modulus;
+            for (i = 1; i <= 10; i++) {
+                Console.WriteLine("Enter the "+i+" value:");
+                n = int.Parse(Console.ReadLine());
+                modulus = n % 2;
+                if (modulus == 0)
+                    Console.WriteLine("The number " + n + " is even");
+                else
+                    Console.WriteLine("The number " + n + " is odd");
+                Console.ReadLine();
+            }
+
+
+
+
+
+        }
+    }
+}
