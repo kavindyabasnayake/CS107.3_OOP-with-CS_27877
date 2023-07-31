@@ -1,0 +1,99 @@
+//Program.cs
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Lab05_Question05
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int i;
+            int[] arr1 = new int[10];
+            for (i = 0; i < 10; i++)
+            {
+                Console.WriteLine("Enter a value to the "+(i+1)+"element");
+                arr1[i] = int.Parse(Console.ReadLine());
+            }
+
+            for (i = 0; i < 10; i++)
+            {
+                Console.WriteLine("element"+(i+1)+"="+arr1[i]);
+            }
+            Console.ReadLine();
+
+            ArrayCal cal1= new ArrayCal(arr1[i]);
+            Console.WriteLine(cal1.arrayMin());
+            Console.WriteLine(cal1.arrayMax());
+            Console.WriteLine(cal1.arrayAvg());
+
+            Console.ReadLine();
+            
+
+        }
+    }
+}
+
+
+//Array.cs
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Lab05_Question05
+{
+    internal class ArrayCal
+    {
+        public int min,count,j,max,total=0,avg;
+        public int[] arr=new int[10];
+
+        public ArrayCal(int arr1) 
+        {
+            arr[j] = arr1;
+        }
+
+        public int arrayMin()
+        {
+            min = arr[0];
+            for(count = 1;count < 9; count++)
+            {
+                if (arr[j]<min)
+                    min = arr[j];
+
+            }
+            return min;
+        }
+
+        public int arrayMax()
+        {
+            max = arr[0];
+            for (count = 1; count < 9; count++)
+            {
+                if (arr[j] >max)
+                    max = arr[j];
+
+            }
+            return max;
+        }
+
+        public int arrayAvg()
+        {
+            for (count = 1; count < 9; count++)
+            {
+                total += arr[j];
+
+            }
+            avg = total / 10;
+            return avg;
+        }
+
+       
+    }
+}
