@@ -1,0 +1,94 @@
+//Program.cs
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Lab05
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Enter 1 for Addition");
+            Console.WriteLine("Enter 2 for Subtraction");
+            Console.WriteLine("Enter 3 for Multiplication");
+            Console.WriteLine("Enter 4 for division");
+            int op;
+            int value1, value2;
+            Console.WriteLine("Enter your choice:");
+            op= int.Parse(Console.ReadLine());
+            Console.WriteLine("Enter the first value:");
+            value1 = int.Parse(Console.ReadLine());
+            Console.WriteLine("Enter the second value:");
+            value2 = int.Parse(Console.ReadLine());
+
+            CalculateValues cal1 = new CalculateValues(value1,value2);
+            switch (op)
+            {
+                case 1:Console.WriteLine("The answer is "+cal1.summation());break;
+                case 2: Console.WriteLine("The answer is "+cal1.subtraction());break;
+                case 3: Console.WriteLine("The answer is "+cal1.multiplication());break;
+                case 4: Console.WriteLine("The answer is "+cal1.division());break;
+            }
+
+            Console.ReadLine();
+
+        }
+    }
+}
+
+
+//Cal.cs
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Lab05
+{
+    internal class CalculateValues
+    {
+        public int number1;
+        public int number2;
+        public int sum;
+        public int sub;
+        public int mul;
+        public int div;
+
+        public CalculateValues(int value1, int value2)
+        {
+            number1= value1;
+            number2= value2;
+        }
+
+        public int summation()
+        {
+            sum=number1+ number2;
+            return sum;
+        }
+
+        public int subtraction()
+        {
+            sub = number1 - number2;
+            return sub;
+        }
+
+        public int multiplication()
+        {
+            mul = number1 * number2;
+            return mul;
+        }
+
+        public int division()
+        {
+            div = number1 / number2;
+            return div;
+        }
+    }
+
+}
