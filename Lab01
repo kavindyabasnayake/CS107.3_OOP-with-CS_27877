@@ -1,0 +1,61 @@
+# SE107.3_WEB_27877
+WEB-Lab sessions
+
+# SE107.3_WEB_27877
+WEB-Lab sessions
+
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Lab01
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            //Question 01
+            string name,batch;
+            Console.WriteLine("Enter your name:");
+            name = Console.ReadLine();
+            Console.WriteLine("Enter your batch:");
+            batch = Console.ReadLine();
+            Console.ReadLine();
+
+            //Question 02
+            float r,area;
+            const float pi = 3.14159f;
+            Console.WriteLine("Enter the radius:");
+            r = float.Parse(Console.ReadLine());
+            area = pi * r * r;
+            Console.WriteLine("The area is "+area);
+            Console.ReadLine();
+
+            //Question 03
+            int a, b,sum;
+            Console.WriteLine("Enter the first value:");
+            a = int.Parse(Console.ReadLine());
+            Console.WriteLine("Enter the second value:");
+            b = int.Parse(Console.ReadLine());
+            sum = a + b;
+            Console.WriteLine("The summation is "+sum);
+            Console.ReadLine();
+
+            //Question 04
+            float salary,tax,newSalary;
+            Console.WriteLine("Enter your salary:");
+            salary = float.Parse(Console.ReadLine());
+            Console.WriteLine("Enter the tax rate:");
+            tax= int.Parse(Console.ReadLine());
+            newSalary = salary * (100 -tax) / 100;
+            Console.WriteLine("Your new salary:" +newSalary);
+            Console.ReadLine();
+
+
+
+
+
+        }
+    }
+}
